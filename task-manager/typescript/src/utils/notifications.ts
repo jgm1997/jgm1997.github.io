@@ -1,0 +1,1 @@
+function signPayload(payloadStr: string) {}

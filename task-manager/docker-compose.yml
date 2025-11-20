@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  typescript:
+    build:
+      context: ./typescript
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+  python:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000

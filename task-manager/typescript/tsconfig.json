@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "target": "esnext",
+    "module": "commonjs",
+    "forceConsistentCasingInFileNames": false,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "src/*": ["src/*"],
+      "@development/auth-service": ["libs/auth/src"],
+      "@development/auth-service/*": ["libs/auth/src/*"],
+      "@development/1edge-api-types": ["libs/types/src"],
+      "@development/1edge-api-types/*": ["libs/types/src/*"]
+    }
+  }
+}
