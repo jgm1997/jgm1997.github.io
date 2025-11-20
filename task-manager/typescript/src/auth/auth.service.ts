@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { LoginDto, RegisterDto } from '../dto/auth'
-import { supabase } from 'src/common/supabase.client';
+import { supabase } from '../common/supabase.client';
 import { createAccessToken, createRefreshToken } from 'src/utils/token';
 
 @Injectable()

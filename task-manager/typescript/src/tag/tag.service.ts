@@ -1,5 +1,5 @@
 import { BadRequestException, ForbiddenException, Injectable } from '@nestjs/common';
-import { supabase } from 'src/common/supabase.client';
+import { supabase } from '../common/supabase.client';
 import { CreateTagDto, UpdateTagDto } from 'src/dto/tag';
 import { v4 } from 'uuid';
 
