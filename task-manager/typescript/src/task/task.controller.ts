@@ -10,7 +10,7 @@ import {
   Req,
   UseGuards,
 } from '@nestjs/common';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { AuthGuard } from '../auth/auth.guard';
 import { TaskService } from './task.service';
 import { TagService } from '../tag/tag.service';
 import { CreateTaskDto, UpdateTaskDto } from '../dto/task';
