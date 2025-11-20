@@ -1,6 +1,6 @@
 import { BadRequestException, ForbiddenException, Injectable } from '@nestjs/common';
 import { supabase } from '../common/supabase.client';
-import { CreateTaskDto, UpdateTaskDto } from 'src/dto/task';
+import { CreateTaskDto, UpdateTaskDto } from '../dto/task';
 
 @Injectable()
 export class TaskService {

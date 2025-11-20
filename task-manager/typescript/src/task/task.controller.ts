@@ -13,7 +13,7 @@ import {
 import { AuthGuard } from 'src/auth/auth.guard';
 import { TaskService } from './task.service';
 import { TagService } from '../tag/tag.service';
-import { CreateTaskDto, UpdateTaskDto } from 'src/dto/task';
+import { CreateTaskDto, UpdateTaskDto } from '../dto/task';
 
 @UseGuards(AuthGuard)
 @Controller('tasks')

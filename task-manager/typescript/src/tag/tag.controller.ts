@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { TagService } from './tag.service';
-import { CreateTagDto } from 'src/dto/tag';
+import { CreateTagDto } from '../dto/tag';
 
 @UseGuards(AuthGuard)
 @Controller('tags')
