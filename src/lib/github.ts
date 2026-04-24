@@ -1,4 +1,4 @@
-const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
+const GITHUB_TOKEN = import.meta.env.PORTFOLIO_GITHUB_TOKEN;
 export const GITHUB_USERNAME = import.meta.env.GITHUB_USERNAME;
 
 function getAuthHeaders(): Record<string, string> {

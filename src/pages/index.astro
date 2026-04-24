@@ -12,9 +12,9 @@ const contributions = await getContributions();
 ---
 
 <BaseLayout>
-    <Hero />
-    <TechStack />
-    <GithubRepos repos={repos} />
-    <ContribGraph data={contributions} />
-    <ContactForm />
+    <div id="about"><Hero/></div>
+    <div id="stack"><TechStack /></div>
+    <div id="repos"><GithubRepos repos={repos} /></div>
+    <div id="contributions"><ContribGraph data={contributions} /></div>
+    <div id="contact"><ContactForm /></div>
 </BaseLayout>

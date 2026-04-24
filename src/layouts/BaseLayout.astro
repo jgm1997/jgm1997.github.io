@@ -4,7 +4,7 @@ import "../styles/global.css";
 interface Props {
   title?: string;
 }
-const { title = "My portfolio" } = Astro.props;
+const { title = "Javier González - Backend Engineer" } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,9 +23,80 @@ const { title = "My portfolio" } = Astro.props;
       }
     </style>
   </head>
-  <body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
+  <body
+    class="bg-zinc-950 text-zinc-100 font-sans antialiased min-h-screen flex flex-col"
+  >
+    <!-- Navbar -->
+    <header
+      class="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-sm"
+    >
+      <nav
+        class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between"
+      >
+        <span class="font-semibold text-white"
+          >jgm1997<span class="text-indigo-400">.dev</span></span
+        >
+        <ul class="flex items-center gap-6 text-sm text-zinc-400">
+          <li>
+            <a href="#about" class="hover:text-white transition-colors">About</a
+            >
+          </li>
+          <li>
+            <a href="#stack" class="hover:text-white transition-colors">Stack</a
+            >
+          </li>
+          <li>
+            <a href="#repos" class="hover:text-white transition-colors">Repos</a
+            >
+          </li>
+          <li>
+            <a href="#contributions" class="hover:text-white transition-colors"
+              >Activity</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-white transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content -->
     <main class="max-w-4xl mx-auto px-6 py-16 space-y-24">
       <slot />
     </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 mt-8">
+      <div
+        class="max-w-4xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-500"
+      >
+        <span>© {new Date().getFullYear()} Javier González Martín</span>
+        <div class="flex items-center gap-4">
+          <a
+            href="mailto:jgm_1997@protonmail.com"
+            class="hover:text-white transition-colors">Email</a
+          >
+          <a
+            href="https://github.com/jgm1997"
+            class="hover:text-white transition-colors">GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <style is:global>
+      .scrollbar-none {
+        scrollbar-width: none;
+      }
+      .scrollbar-none::-webkit-scrollbar {
+        display: none;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </body>
 </html>
